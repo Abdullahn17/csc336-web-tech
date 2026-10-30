@@ -97,11 +97,48 @@ body {
   outline-offset: 2px;
 }
 
-
+/* hide cards that do not match the checked radio.
+   display:none on the .col wrapper removes it from the flex row,
+   so the remaining cards close up with no empty gaps. */
 main:has(#cat-audio:checked)     section .col:not([data-category="audio"]),
 main:has(#cat-wearables:checked) section .col:not([data-category="wearables"]),
 main:has(#cat-footwear:checked)  section .col:not([data-category="footwear"]),
 main:has(#cat-travel:checked)    section .col:not([data-category="travel"]),
 main:has(#cat-home:checked)      section .col:not([data-category="home"]) {
   display: none;
+}
+
+/* ---- Task 2: product page grid with sticky details box ---- */
+.product-layout {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "image"
+    "details"
+    "description";
+}
+
+.product-media       { grid-area: image; }
+.product-details     { grid-area: details; }
+.product-description { grid-area: description; }
+
+/* BP = 600 + 59 = 659px */
+@media (min-width: 659px) {
+  .product-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "image       details"
+      "description description";
+    align-items: start;   
+  }
+
+  .product-details {
+    position: sticky;
+    top: 89px;           
+  }
+
+  .detail-img {
+    height: 640px;       
+  }
 }

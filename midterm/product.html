@@ -31,22 +31,38 @@
 
   <main class="container py-4">
     <a href="index.html" class="btn btn-link ps-0">&larr; Back to products</a>
-    <article class="row g-4 mt-1">
-      <div class="col-md-6">
+
+    <!-- Task 2: CSS Grid with named grid-template-areas -->
+    <article class="product-layout mt-1">
+      <div class="product-media">
         <div class="product-img detail-img">Product Image</div>
       </div>
-      <div class="col-md-6">
+
+      <div class="product-details">
         <h1>Wireless Headphones</h1>
         <p class="price fs-3">Rs. 2,999</p>
-        <p>
-          Comfortable over-ear wireless headphones with clear sound, a long-lasting battery,
-          and a built-in microphone for calls. Great for music, study, and travel.
-        </p>
         <form>
           <label for="qty" class="form-label">Quantity</label>
           <input type="number" id="qty" name="qty" class="form-control qty-input mb-3" value="1" min="1" max="10">
           <button type="button" class="btn btn-accent btn-lg">Add to Cart</button>
         </form>
+      </div>
+
+      <div class="product-description">
+        <h2 class="h4">Description</h2>
+        <p>
+          Comfortable over-ear wireless headphones with clear sound, a long-lasting battery,
+          and a built-in microphone for calls. Great for music, study, and travel.
+        </p>
+        <p>The soft memory-foam ear cushions stay comfortable through long listening sessions, and the adjustable steel-reinforced headband fits most head sizes without pinching.</p>
+        <p>Bluetooth 5.3 gives a stable connection up to 10 metres, and the headphones pair with two devices at once, so you can switch from your laptop to your phone without reconnecting.</p>
+        <p>A single charge delivers up to 40 hours of playback. A quick 10-minute charge over USB-C gives about 5 hours, which is handy before a commute.</p>
+        <p>Active noise reduction softens traffic, fans and background chatter. A transparency mode lets you hear announcements without taking the headphones off.</p>
+        <p>The built-in dual microphones filter wind and background noise, so your voice stays clear on calls and online classes.</p>
+        <p>The ear cups fold flat and swivel, and the headphones come with a hard travel case, a USB-C charging cable and a 3.5mm audio cable for wired use.</p>
+        <p>Backed by a 12-month warranty. If something goes wrong, our support team will repair or replace the unit.</p>
+        <p>Care tip: wipe the ear cushions with a slightly damp cloth, keep the headphones in the travel case, and avoid leaving them in a hot car.</p>
+        <p>In the box: headphones, hard travel case, USB-C charging cable, 3.5mm audio cable and a quick-start guide.</p>
       </div>
     </article>
   </main>
