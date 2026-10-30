@@ -1,4 +1,3 @@
-
 body {
   background-color: #f4f4f4;
 }
@@ -67,4 +66,42 @@ body {
 
 .site-footer a:hover {
   color: #f57224;
+}
+
+/* ---- Task 1: CSS-only category filter ---- */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-bar label {
+  padding: 0.4rem 1rem;
+  border: 1px solid hsl(53, 70%, 45%);
+  border-radius: 2rem;
+  background: #fff;
+  color: #212529;
+  cursor: pointer;
+}
+
+/* selected filter uses accent colour H = 53 */
+.filter-bar input:checked + label {
+  background: hsl(53, 70%, 45%);
+  color: #212529;
+  font-weight: bold;
+}
+
+/* keyboard focus outline */
+.filter-bar input:focus-visible + label {
+  outline: 2px solid #212529;
+  outline-offset: 2px;
+}
+
+
+main:has(#cat-audio:checked)     section .col:not([data-category="audio"]),
+main:has(#cat-wearables:checked) section .col:not([data-category="wearables"]),
+main:has(#cat-footwear:checked)  section .col:not([data-category="footwear"]),
+main:has(#cat-travel:checked)    section .col:not([data-category="travel"]),
+main:has(#cat-home:checked)      section .col:not([data-category="home"]) {
+  display: none;
 }

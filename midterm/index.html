@@ -31,8 +31,30 @@
 
   <main class="container py-4">
     <h1 class="mb-4" id="products">Featured Products</h1>
+
+    <!-- Task 1: CSS-only category filter (K = 5 categories + All = 6 radios) -->
+    <div class="filter-bar mb-4" role="radiogroup" aria-label="Filter by category">
+      <input type="radio" class="visually-hidden" name="category" id="cat-all" checked>
+      <label for="cat-all">All</label>
+
+      <input type="radio" class="visually-hidden" name="category" id="cat-audio">
+      <label for="cat-audio">Audio</label>
+
+      <input type="radio" class="visually-hidden" name="category" id="cat-wearables">
+      <label for="cat-wearables">Wearables</label>
+
+      <input type="radio" class="visually-hidden" name="category" id="cat-footwear">
+      <label for="cat-footwear">Footwear</label>
+
+      <input type="radio" class="visually-hidden" name="category" id="cat-travel">
+      <label for="cat-travel">Travel</label>
+
+      <input type="radio" class="visually-hidden" name="category" id="cat-home">
+      <label for="cat-home">Home</label>
+    </div>
+
     <section class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-      <div class="col">
+      <div class="col" data-category="audio">
         <article class="card h-100">
           <div class="product-img">Image 1</div>
           <div class="card-body">
@@ -42,7 +64,7 @@
           </div>
         </article>
       </div>
-      <div class="col">
+      <div class="col" data-category="wearables">
         <article class="card h-100">
           <div class="product-img">Image 2</div>
           <div class="card-body">
@@ -52,7 +74,7 @@
           </div>
         </article>
       </div>
-      <div class="col">
+      <div class="col" data-category="travel">
         <article class="card h-100">
           <div class="product-img">Image 3</div>
           <div class="card-body">
@@ -62,7 +84,7 @@
           </div>
         </article>
       </div>
-      <div class="col">
+      <div class="col" data-category="footwear">
         <article class="card h-100">
           <div class="product-img">Image 4</div>
           <div class="card-body">
@@ -72,7 +94,7 @@
           </div>
         </article>
       </div>
-      <div class="col">
+      <div class="col" data-category="wearables">
         <article class="card h-100">
           <div class="product-img">Image 5</div>
           <div class="card-body">
@@ -82,7 +104,7 @@
           </div>
         </article>
       </div>
-      <div class="col">
+      <div class="col" data-category="travel">
         <article class="card h-100">
           <div class="product-img">Image 6</div>
           <div class="card-body">
@@ -92,7 +114,7 @@
           </div>
         </article>
       </div>
-      <div class="col">
+      <div class="col" data-category="home">
         <article class="card h-100">
           <div class="product-img">Image 7</div>
           <div class="card-body">
@@ -102,7 +124,7 @@
           </div>
         </article>
       </div>
-      <div class="col">
+      <div class="col" data-category="audio">
         <article class="card h-100">
           <div class="product-img">Image 8</div>
           <div class="card-body">
