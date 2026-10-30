@@ -130,15 +130,25 @@ main:has(#cat-home:checked)      section .col:not([data-category="home"]) {
     grid-template-areas:
       "image       details"
       "description description";
-    align-items: start;   
+    align-items: start;   /* lets the details box stay short so sticky can work */
   }
 
   .product-details {
     position: sticky;
-    top: 89px;           
+    top: 89px;            /* (59 mod 40) + 70 = 89 */
   }
 
   .detail-img {
-    height: 640px;       
+    height: 640px;        
   }
+}
+
+
+.search-input {
+  max-width: 320px;
+}
+
+.premium-label {
+  background-color: hsl(53, 70%, 45%);
+  color: #212529;
 }
